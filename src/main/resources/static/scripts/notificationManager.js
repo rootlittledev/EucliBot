@@ -64,7 +64,7 @@ function sendData(){
     console.log(data);
 
     $.ajax({
-        url: 'http://localhost:8080/manage/notification/add',
+        url: '/manage/notification/add',
         type: 'POST',
         data: JSON.stringify(data),
         contentType: 'application/json; charset=utf-8',

@@ -10,7 +10,7 @@ function sendData(){
     console.log(data);
 
     $.ajax({
-        url: 'http://localhost:8080/manage/poll/add',
+        url: '/manage/poll/add',
         type: 'POST',
         data: JSON.stringify(data),
         contentType: 'application/json; charset=utf-8',
