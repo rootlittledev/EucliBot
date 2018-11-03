@@ -16,7 +16,7 @@ public class RequestSender {
     public void notification(Notification notification) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 
-        HttpPost request = new HttpPost("https://euclisays.herokuapp.com//notification/receive");
+        HttpPost request = new HttpPost("https://euclisays.herokuapp.com/notification/receive");
         StringEntity params =new StringEntity(mapper.writeValueAsString(notification));
         request.addHeader("content-type", "application/json");
         request.setEntity(params);
