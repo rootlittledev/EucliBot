@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <title>Getting Started: Serving Web Content</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/main.css}">
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+</head>
+<body >
+<div class="col-sm-3">
+    <form >
+        <div style="border: 2px solid black; border-radius: 5px; padding: 10px;" >
+            <div style="border-bottom: 2px solid black; margin: 10px">
+                <div class="form-group">
+                    <label for="notification-name">What should be the notification's name?</label>
+                    <input type="text" id="notification-name" class="form-control" placeholder="Required">
+                    <label for="notification-text">What will be the notification's text?</label>
+                    <input type="text" id="notification-text" class="form-control" placeholder="Optional">
+                    <button id="add-argument" class="btn btn-default" type="submit">Add placeholder</button>
+                </div>
+            </div>
+        <div style="border-bottom: 2px solid black;">
+            <div class="form-group" style="width: 305.8px; position: relative; left: 20px; margin-left: -10px">
+                <label for="content-url" >Add a image/gif here</label>
+                <input type="text" id="content-url"  class="form-control" placeholder="Required">
+            </div>
+            <div class="form-row align-items-center" style="height: 70px;">
+                <div class="col-sm-5 my-1">
+                    <label for="content-url-width">Width in pixels</label>
+                    <input type="text" id="content-url-width" class="form-control" placeholder="Required">
+                </div>
+                <div class="col-sm-5 my-1">
+                    <label for="content-url-height">Height in pixels</label>
+                    <div class="input-group">
+                        <input type="text" id="content-url-height" class="form-control" placeholder="Required" style="border-radius: 4px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="border-bottom: 2px solid black; margin: 10px">
+            <div class="form-group">
+                <label for="sound-url">You can add a sound?</label>
+                <input type="text" id="sound-url" class="form-control" placeholder="Optional">
+            </div>
+        </div>
+        <div style="border-bottom: 2px solid black; margin: 10px">
+            <div class="form-group">
+                <label for="notification-duration">How long will the notification be visible?</label>
+                <input type="text" id="notification-duration" class="form-control" placeholder="Required">
+            </div>
+        </div>
+        <button id="next" class="btn btn-default" type="submit">Preview</button>
+        <button id="notification-add" class="btn btn-default" type="submit">Add notification</button>
+        </div>
+    </form>
+</div>
+<div id="display-snippet" style=" position: absolute; left: 30%; width: 960px; height: 540px; background: url('https://i.gyazo.com/e2bd4ff0ef0b60e607bb277cb454427d.png') center; background-size: cover">
+<div id="notification">
+    <p id="notification-display-text" style="position: center"></p>
+    <img src="" id="notification-display-source">
+</div>
+</div>
+<div class="row" id="notification-control" style="position: absolute;left: 31%;width: 480px;top: 550px;border: 2px solid black;border-radius: 5px;align-items: center;">
+<div id="size-controller" class="span6" >
+    <form class="form-row">
+            <label for="notification-width" style="width: 300px; margin-left: 15px;">Width</label>
+            <input type="range" class="slider" style="width: 450px; margin-left: 15px; padding: 10px" min="0" value="1" max="960" id="notification-width">
+            <label for="notification-height" style="width: 300px; margin-left: 15px;">Height</label>
+            <input type="range" class="slider" style="width: 450px; margin-left: 15px; padding: 10px" min="0" max="540" id="notification-height">
+    </form>
+</div>
+<div class="form-row align-items-center">
+    <div class="col-sm-3 my-1" style="padding: 0 5px 0 0;width: 220px;margin-left: 15px;">
+        <label for="notification-text-color" >Text color</label><br>
+        <input type="color" id="notification-text-color" style="width: 220px"><br>
+    </div>
+    <div class="col-sm-3 my-1" style="padding: 0 0 0 5px; width: 220px">
+        <label for="notification-text-size">Text size</label>
+        <div class="input-group" style="margin-top: 5px;">
+            <input type="range" class="slider" style="width: 220px" min="0" max="92" id="notification-text-size">
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script th:src="@{/scripts/notificationManager.js}"></script>
+</html>

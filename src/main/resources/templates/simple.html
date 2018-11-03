@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <title>Getting Started: Serving Web Content</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/main.css}">
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+</head>
+<body >
+<div class="col-sm-3">
+    <form >
+        <div style="border: 2px solid black; border-radius: 5px; padding: 10px;" >
+            <div style="border-bottom: 2px solid black; margin: 10px">
+                <div class="form-group">
+                    <label for="command-name">What should be the command key(without ! at the beginning)?</label>
+                    <input type="text" id="command-name" class="form-control" placeholder="Required">
+                    <label for="command-text">What will be the bot's reply?</label>
+                    <input type="text" id="command-text" class="form-control" placeholder="Optional">
+                    <button id="add-argument" class="btn btn-default" type="submit">Add placeholder</button>
+                </div>
+            </div>
+            <button id="command-add" class="btn btn-default" style="margin-left: 10px" type="submit">Add command</button>
+        </div>
+    </form>
+</div>
+</div>
+</body>
+<script th:src="@{/scripts/simpleCommandManager.js}"></script>
+</html>
+</body>
+</html>

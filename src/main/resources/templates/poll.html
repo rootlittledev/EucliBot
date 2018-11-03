@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <title>Getting Started: Serving Web Content</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/main.css}">
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+</head>
+<body >
+<div class="col-sm-3">
+    <form >
+        <div style="border: 2px solid black; border-radius: 5px; padding: 10px;" >
+            <div style="border-bottom: 2px solid black; margin: 10px">
+                <div class="form-group">
+                    <label for="poll-name">What should be the poll key(without ! at the beginning)?</label>
+                    <input type="text" id="poll-name" class="form-control" placeholder="Required">
+                    <label for="poll-vote">What will be the poll for?</label>
+                    <input type="text" id="poll-vote" class="form-control" placeholder="Optional">
+                    <label for="poll-success">What will be the bot's reply on success?</label>
+                    <input type="text" id="poll-success" class="form-control" placeholder="Optional">
+                    <label for="poll-failure">What will be the bot's reply on failure?</label>
+                    <input type="text" id="poll-failure" class="form-control" placeholder="Optional">
+                    <label for="poll-duration">What will be the poll duration?</label>
+                    <input type="number" id="poll-duration" class="form-control" placeholder="Optional">
+                </div>
+            </div>
+            <button id="command-add" class="btn btn-default" style="margin-left: 10px" type="submit">Add command</button>
+        </div>
+    </form>
+</div>
+</div>
+</body>
+<script th:src="@{/scripts/pollCommandManager.js}"></script>
+</html>
+</body>
+</html>
