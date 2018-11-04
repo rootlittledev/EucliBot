@@ -18,9 +18,10 @@ public class NotificationExecutor implements Command {
     public void execute() {
         RequestSender requestSender = new RequestSender();
         try {
-            System.out.println("Send");
-            notification.setText(String.format(notification.getText(), arguments));
+            String originalText = notification.getText();
+            notification.setText(String.format(originalText, arguments));
             requestSender.notification(notification );
+            notification.setText(originalText);
         } catch (IOException e) {
             e.printStackTrace();
         }
