@@ -113,4 +113,8 @@ $(function () {
     $("#notification-text-color").change(function () {
         $("#notification-display-text").css("color", $("#notification-text-color").val());
     });
+    $("#change-background").click(function () {
+        $("#display-snippet").css('background', "url(" + $("#snippet-background").val() + ") center");
+        $("#display-snippet").css('background-size', "cover");
+    })
 });
