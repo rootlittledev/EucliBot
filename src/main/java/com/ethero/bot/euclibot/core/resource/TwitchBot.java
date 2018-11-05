@@ -320,6 +320,7 @@ public class TwitchBot {
 			        this.writer.flush();
 			    } else if (line.contains("PRIVMSG"))
 			    {
+			        System.out.println(line);
 			        String str[];
 			        str = line.split("!");
 			        final User msg_user = User.getUser(str[0].substring(1, str[0].length()));
