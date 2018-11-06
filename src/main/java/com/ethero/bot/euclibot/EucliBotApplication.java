@@ -13,7 +13,7 @@ public class EucliBotApplication {
         Interaction bot = new Interaction();
 
         bot.connect();
-        bot.joinChannel("forsen");
+        bot.joinChannel("GoldenRevolution");
         bot.start();
     }
 }
